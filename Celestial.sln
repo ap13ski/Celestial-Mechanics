@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Celestial", "Celestial.csproj", "{AC956F0F-2ECF-4752-9230-43C279A3EE7B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AC956F0F-2ECF-4752-9230-43C279A3EE7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC956F0F-2ECF-4752-9230-43C279A3EE7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC956F0F-2ECF-4752-9230-43C279A3EE7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC956F0F-2ECF-4752-9230-43C279A3EE7B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
