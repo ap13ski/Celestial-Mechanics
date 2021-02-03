@@ -524,8 +524,7 @@ namespace Celestial
             graphics.DrawString($"Grid size: {gs} m ({gs2} m)", new Font("Arial", 10f), Brushes.DarkGray, 0, pictureBox1.Height - shift);
         }
 
-        // The mouse wheel scrolling event handler changes the opacity
-        // of the form.
+        // The mouse wheel scrolling event handler 
         private void this_MouseWheel(object sender, MouseEventArgs e)
         {
             double scaleDown = 0.9;
