@@ -8,6 +8,6 @@ You may need to [install](https://dotnet.microsoft.com/en-us/download/dotnet-fra
 
 Visual Studio 2015, .NET Framework 4.6.1 
 
-Short [demonstration](https://github.com/ap13ski/Celestial-Mechanics/blob/main/demo.avi)(41 sec, 10 Mb).
+Short [demonstration](https://github.com/ap13ski/Celestial-Mechanics/blob/main/demo.avi) (41 sec, 10 Mb).
 
 ![Screenshot](celestial.png)
