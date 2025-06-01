@@ -11,6 +11,5 @@ Compiled with Visual Studio 2015 Community, .NET Framework 4.6.1.
 ![Screenshot](celestial.png)
 
 Short demonstration video is available (1 min, 1.5 Mb):
-<video width="300" src="demo.mp4" /> 
 
-
+https://github.com/user-attachments/assets/09499bcf-33fd-459d-a0ff-632ca05ee21b
