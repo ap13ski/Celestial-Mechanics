@@ -116,7 +116,7 @@ namespace Celestial
 
             CreateResults(iteration_counter);
 
-            SetKoef();
+            SetGlobalScaleFactor();
 
             LoadScreen();
             DrawVectors();
@@ -220,7 +220,7 @@ namespace Celestial
             return values;
         }
 
-        private void SetKoef()
+        private void SetGlobalScaleFactor()
         {
             int scale_grid_factor = 200;
             global_scale_factor = GetValues().Max() / scale_grid_factor;
