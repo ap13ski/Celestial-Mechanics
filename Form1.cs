@@ -59,73 +59,6 @@ namespace Celestial
 
         const double G = 6.6743E-11;          // Gravitational constant
 
-
-        /// <summary>
-        /// PRESETS BLOCK
-        /// </summary>
-        /// 
-
-        /* Jupiter preset
-        INFO:
-        Set n = 5
-        Copy to Form1()
-
-        // Jupiter
-        p[0].R.SetVectorByPoints(0, 0, 0, 0);
-        p[0].V.SetVectorByAngle(0, 0, 0, 0);
-        p[0].M = 1.8982 * Math.Pow(10, 27);
-        p[0].Name = "Jupiter";
-        // Io 
-        p[1].R.SetVectorByPoints(0, 0, 4.217 * Math.Pow(10, 8), 0);
-        p[1].V.SetVectorByAngle(0, 0, 17334, 90);
-        p[1].M = 8.931938 * Math.Pow(10, 22);
-        p[1].Name = "Io";
-        //Europa
-        p[2].R.SetVectorByPoints(0, 0, 6.709 * Math.Pow(10, 8), 0);
-        p[2].V.SetVectorByAngle(0, 0, 13740, 90);
-        p[2].M = 4.799844 * Math.Pow(10, 22);
-        p[2].Name = "Europa";
-        //Ganymede
-        p[3].R.SetVectorByPoints(0, 0, -1.0704 * Math.Pow(10, 9), 0);
-        p[3].V.SetVectorByAngle(0, 0, 10880, 270);
-        p[3].M = 1.4819 * Math.Pow(10, 23);
-        p[3].Name = "Ganymede";
-        //Callisto
-        p[4].R.SetVectorByPoints(0, 0, -1.8827 * Math.Pow(10, 9), 0);
-        p[4].V.SetVectorByAngle(0, 0, 8204, 270);
-        p[4].M = 1.075938 * Math.Pow(10, 23);
-        p[4].Name = "Callisto";
-
-        // Copy to DrawEllipces()
-        DrawEllipse(p[0].R, Brushes.DarkKhaki, 18, isLabeled, p[0].Name);
-        DrawEllipse(p[1].R, Brushes.DarkOrange, 8, isLabeled, p[1].Name);
-        DrawEllipse(p[2].R, Brushes.WhiteSmoke, 8, isLabeled, p[2].Name);
-        DrawEllipse(p[3].R, Brushes.Gray, 12, isLabeled, p[3].Name);
-        DrawEllipse(p[4].R, Brushes.DarkViolet, 12, isLabeled, p[4].Name);
-        */
-
-        /*Earth preset
-        INFO:
-        Set n = 2
-        Copy to Form1()
-
-        // Earth
-        p[0].R.SetVectorByPoints(0, 0, 0, 0);
-        p[0].V.SetVectorByAngle(0, 0, 0, 0);
-        p[0].M = 5.97237 * Math.Pow(10, 24);
-        p[0].Name = "Earth";
-        // Moon
-        p[1].R.SetVectorByPoints(0, 0, 3.84399 * Math.Pow(10, 8), 0);
-        p[1].V.SetVectorByAngle(0, 0, 1022, 90);
-        p[1].M = 7.342 * Math.Pow(10, 22);
-        p[1].Name = "Moon";
-
-
-        // Copy to DrawEllipces()
-        DrawEllipse(p[0].R, Brushes.DarkGreen, 18, isLabeled, p[0].Name);
-        DrawEllipse(p[1].R, Brushes.DarkGray, 10, isLabeled, p[1].Name);
-        */
-
         public Form1()
         {
             InitializeComponent();
@@ -163,6 +96,17 @@ namespace Celestial
             p[4].M = 1.075938 * Math.Pow(10, 23);
             p[4].Name = "Callisto";
 
+            // // Earth
+            // p[0].R.SetVectorByPoints(0, 0, 0, 0);
+            // p[0].V.SetVectorByAngle(0, 0, 0, 0);
+            // p[0].M = 5.97237 * Math.Pow(10, 24);
+            // p[0].Name = "Earth";
+            // // Moon
+            // p[1].R.SetVectorByPoints(0, 0, 3.84399 * Math.Pow(10, 8), 0);
+            // p[1].V.SetVectorByAngle(0, 0, 1022, 90);
+            // p[1].M = 7.342 * Math.Pow(10, 22);
+            // p[1].Name = "Moon";
+
             is_particles_array_loaded = true;
 
             SetGridSizeHard();
@@ -182,11 +126,16 @@ namespace Celestial
 
         private void DrawEllipces()
         {
+            // particles_number = 5; -->> class Form1 : Form {}
             DrawEllipse(p[0].R, Brushes.DarkKhaki, 18, is_labeled, p[0].Name);
             DrawEllipse(p[1].R, Brushes.DarkOrange, 8, is_labeled, p[1].Name);
             DrawEllipse(p[2].R, Brushes.WhiteSmoke, 8, is_labeled, p[2].Name);
             DrawEllipse(p[3].R, Brushes.Gray, 12, is_labeled, p[3].Name);
             DrawEllipse(p[4].R, Brushes.DarkViolet, 12, is_labeled, p[4].Name);
+            
+            // particles_number = 2; -->> class Form1 : Form {}
+            // DrawEllipse(p[0].R, Brushes.DarkGreen, 18, is_labeled, p[0].Name);
+            // DrawEllipse(p[1].R, Brushes.DarkGray, 10, is_labeled, p[1].Name);
         }
 
         private void LogStart()
