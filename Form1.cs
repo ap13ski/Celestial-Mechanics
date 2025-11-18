@@ -542,7 +542,7 @@ namespace Celestial
             checkBoxStartPause.Checked = false;
         }
 
-        private void Form1_Resize(object sender, EventArgs e)
+        private void FormMain_Resize(object sender, EventArgs e)
         {
             const int const1 = 40;
             const int const2 = 16;
@@ -563,7 +563,7 @@ namespace Celestial
             }
         }
 
-        private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
+        private void pictureBoxMain_MouseUp(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -573,7 +573,7 @@ namespace Celestial
 
         }
 
-        private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
+        private void pictureBoxMain_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -582,7 +582,7 @@ namespace Celestial
             }
         }
 
-        private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
+        private void pictureBoxMain_MouseMove(object sender, MouseEventArgs e)
         {
             if (is_mouse_down == true)
             {

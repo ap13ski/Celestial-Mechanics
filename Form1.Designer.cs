@@ -42,11 +42,11 @@
             this.checkBoxTraces = new System.Windows.Forms.CheckBox();
             this.checkBoxLog = new System.Windows.Forms.CheckBox();
             this.checkBoxGridAuto = new System.Windows.Forms.CheckBox();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTipMain = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize) (this.pictureBoxMain)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // pictureBoxMain
             // 
             this.pictureBoxMain.InitialImage = null;
             this.pictureBoxMain.Location = new System.Drawing.Point(47, 1);
@@ -54,9 +54,9 @@
             this.pictureBoxMain.Size = new System.Drawing.Size(299, 258);
             this.pictureBoxMain.TabIndex = 0;
             this.pictureBoxMain.TabStop = false;
-            this.pictureBoxMain.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
-            this.pictureBoxMain.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
-            this.pictureBoxMain.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseUp);
+            this.pictureBoxMain.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBoxMain_MouseDown);
+            this.pictureBoxMain.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBoxMain_MouseMove);
+            this.pictureBoxMain.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBoxMain_MouseUp);
             // 
             // imageListIcons
             // 
@@ -74,7 +74,7 @@
             this.imageListIcons.Images.SetKeyName(9, "grid_m.png");
             this.imageListIcons.Images.SetKeyName(10, "planets.png");
             // 
-            // listBox1
+            // listBoxMain
             // 
             this.listBoxMain.Enabled = false;
             this.listBoxMain.ItemHeight = 16;
@@ -100,7 +100,7 @@
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(45, 41);
             this.buttonSave.TabIndex = 6;
-            this.toolTip1.SetToolTip(this.buttonSave, "Save the log to the program directory (csv)");
+            this.toolTipMain.SetToolTip(this.buttonSave, "Save the log to the program directory (csv)");
             this.buttonSave.UseVisualStyleBackColor = true;
             this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
@@ -119,7 +119,7 @@
             this.checkBoxIsLabeled.Size = new System.Drawing.Size(45, 45);
             this.checkBoxIsLabeled.TabIndex = 1;
             this.checkBoxIsLabeled.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.toolTip1.SetToolTip(this.checkBoxIsLabeled, "Show / Hide the captions");
+            this.toolTipMain.SetToolTip(this.checkBoxIsLabeled, "Show / Hide the captions");
             this.checkBoxIsLabeled.UseVisualStyleBackColor = true;
             this.checkBoxIsLabeled.CheckedChanged += new System.EventHandler(this.checkBoxIsLabeled_CheckedChanged);
             // 
@@ -137,7 +137,7 @@
             this.checkBoxStartPause.Size = new System.Drawing.Size(45, 45);
             this.checkBoxStartPause.TabIndex = 0;
             this.checkBoxStartPause.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.toolTip1.SetToolTip(this.checkBoxStartPause, "Start / Stop");
+            this.toolTipMain.SetToolTip(this.checkBoxStartPause, "Start / Stop");
             this.checkBoxStartPause.UseVisualStyleBackColor = true;
             this.checkBoxStartPause.Click += new System.EventHandler(this.checkBoxStartPause_Click);
             // 
@@ -155,7 +155,7 @@
             this.checkBoxSettings.Size = new System.Drawing.Size(45, 45);
             this.checkBoxSettings.TabIndex = 4;
             this.checkBoxSettings.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.toolTip1.SetToolTip(this.checkBoxSettings, "Settings");
+            this.toolTipMain.SetToolTip(this.checkBoxSettings, "Settings");
             this.checkBoxSettings.UseVisualStyleBackColor = true;
             this.checkBoxSettings.Click += new System.EventHandler(this.checkBoxSettings_Click);
             // 
@@ -179,7 +179,7 @@
             this.checkBoxTraces.Size = new System.Drawing.Size(45, 45);
             this.checkBoxTraces.TabIndex = 2;
             this.checkBoxTraces.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.toolTip1.SetToolTip(this.checkBoxTraces, "Show / Hide the traces");
+            this.toolTipMain.SetToolTip(this.checkBoxTraces, "Show / Hide the traces");
             this.checkBoxTraces.UseVisualStyleBackColor = true;
             this.checkBoxTraces.CheckedChanged += new System.EventHandler(this.checkBoxTraces_CheckedChanged);
             // 
@@ -196,7 +196,7 @@
             this.checkBoxLog.Size = new System.Drawing.Size(45, 45);
             this.checkBoxLog.TabIndex = 5;
             this.checkBoxLog.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.toolTip1.SetToolTip(this.checkBoxLog, "Enable / Disable logging");
+            this.toolTipMain.SetToolTip(this.checkBoxLog, "Enable / Disable logging");
             this.checkBoxLog.UseVisualStyleBackColor = true;
             this.checkBoxLog.CheckedChanged += new System.EventHandler(this.checkBoxLog_CheckedChanged);
             // 
@@ -216,18 +216,18 @@
             this.checkBoxGridAuto.Size = new System.Drawing.Size(45, 45);
             this.checkBoxGridAuto.TabIndex = 3;
             this.checkBoxGridAuto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.toolTip1.SetToolTip(this.checkBoxGridAuto, "Automaic / Manual grid size");
+            this.toolTipMain.SetToolTip(this.checkBoxGridAuto, "Automaic / Manual grid size");
             this.checkBoxGridAuto.UseVisualStyleBackColor = true;
             this.checkBoxGridAuto.Click += new System.EventHandler(this.checkBoxGridAuto_Click);
             // 
-            // toolTip1
+            // toolTipMain
             // 
-            this.toolTip1.AutomaticDelay = 10;
-            this.toolTip1.AutoPopDelay = 10000;
-            this.toolTip1.InitialDelay = 10;
-            this.toolTip1.ReshowDelay = 0;
+            this.toolTipMain.AutomaticDelay = 10;
+            this.toolTipMain.AutoPopDelay = 10000;
+            this.toolTipMain.InitialDelay = 10;
+            this.toolTipMain.ReshowDelay = 0;
             // 
-            // Form1
+            // FormMain
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(492, 467);
@@ -242,10 +242,10 @@
             this.Controls.Add(this.pictureBoxMain);
             this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
-            this.Name = "Form1";
+            this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Celestial Mechanics";
-            this.Resize += new System.EventHandler(this.Form1_Resize);
+            this.Resize += new System.EventHandler(this.FormMain_Resize);
             ((System.ComponentModel.ISupportInitialize) (this.pictureBoxMain)).EndInit();
             this.ResumeLayout(false);
         }
@@ -262,7 +262,7 @@
         private System.Windows.Forms.PictureBox pictureBoxMain;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Timer timer2;
-        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.ToolTip toolTipMain;
 
         //Size = new System.Drawing.Size(pictureBox1.Size.Width + 40 + 16, pictureBox1.Size.Height + 33);
         #endregion
