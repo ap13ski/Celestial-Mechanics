@@ -1,6 +1,6 @@
 A simple `C#` (Windows Forms) application that simulates classical celestial mechanics using Jupiter and its four Galilean moons: Io, Europa, Ganymede and Callisto.
 
-The simulation employs the Euler method within an object-oriented model to compute velocity vectors and celestial bodies' positions. While not suitable for high-precision research due to the algorithm's limitations, its simplicity makes it ideal for educational purposes.
+The simulation employs the Euler method within an object-oriented model to compute velocity vectors and celestial bodies' positions. While not suitable for high-precision research due to the algorithm's limitations, its simplicity makes it acceptable for educational purposes.
 
 You can download the executable file `Celestial.exe` on the [release page](https://github.com/ap13ski/Celestial-Mechanics/releases/tag/v.1.1). 
 
@@ -11,5 +11,6 @@ Compiled with Visual Studio 2015 Community, .NET Framework 4.6.1.
 ![Screenshot](celestial.png)
 
 Short demonstration [video](https://github.com/ap13ski/Celestial-Mechanics/blob/main/demo.mp4) is available (1.5 Mb):
+
 
 https://github.com/user-attachments/assets/09499bcf-33fd-459d-a0ff-632ca05ee21b
