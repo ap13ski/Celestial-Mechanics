@@ -172,7 +172,8 @@ namespace Celestial
 
         private void SetGridSizeManual()
         {
-            if (is_grid_size_auto == false) { SetGridSizeHard(); }
+            if (is_grid_size_auto == false)
+                { SetGridSizeHard(); }
         }
 
         private void SetGridSizeAuto()
