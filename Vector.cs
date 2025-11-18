@@ -73,7 +73,6 @@ namespace VectorLibrary
         private double y2;  // Terminal point on the Y-axis
         private double m;   // Magnitude of a vector
         private double a;   // Angle to the X-axis [degrees]
-        private double cosa;// Cosine of the "a" angle
         private double vx;  // Vector projection on the X-axis
         private double vy;  // Vector projection on the Y-axis
 
@@ -125,13 +124,6 @@ namespace VectorLibrary
         {
             get { return a; }
             private set { a = value; }
-        }
-
-        // Cosine of the "a" angle property
-        public double CosA
-        {
-            get { return cosa; }
-            private set { cosa = value; }
         }
 
         // Vector projection on the X-axis property
@@ -217,13 +209,11 @@ namespace VectorLibrary
             {
                 M = 0;
                 A = 0;
-                CosA = 1; // to avoid division by zero in (X2 - X1) / M;
             }
             else
             {
                 M = GetMagnitude(x1, y1, x2, y2);
                 A = GetAngleByPoints(x1, y1, x2, y2);
-                CosA = (X2 - X1) / M;
             }
         }
 
@@ -271,7 +261,6 @@ namespace VectorLibrary
                 X2 = X1 + Vx;
                 Y2 = Y1 + Vy;
             }
-            CosA = Math.Cos(A * Math.PI / 180);
         }
 
         //
@@ -466,12 +455,12 @@ namespace VectorLibrary
             else { v3.SetVectorByAngle(v3.X1, v3.Y1, v3.M * k, v3.A); }
             return v3;
         }
-        //c
+
         public static double ScalarProduct(Vector v1, Vector v2)
         {
             return VectorProjection(v1, v2) * v2.M;
         }
-        //c
+
         public static double VectorProjection(Vector v1, Vector v2)
         {
             Vector v1r = v1.CopyAndRotate(-v2.A);
@@ -482,7 +471,7 @@ namespace VectorLibrary
             }
             else
             {
-                return v1r.M * v1r.CosA;
+                return v1r.M * ((v1r.X2 - v1r.X1) / v1r.M);
             }
         }
 
@@ -573,24 +562,6 @@ namespace VectorLibrary
         {
             return Asin(v.X1, v.Y1, v.X2, v.Y2);
         }
-
-        /*DELETE*/
-        //public void GetInfo()
-        //{
-        //    Console.WriteLine($"(X1, Y1) --> (X2, Y2)");
-        //    Console.WriteLine($"({Math.Round(X1, 2)}, {Math.Round(Y1, 2)}) --> ({Math.Round(X2, 2)}, {Math.Round(Y2, 2)})");
-        //    Console.WriteLine($"Vx: {Math.Round(Vx, 2)}, Vy: {Math.Round(Vy, 2)}");
-        //    Console.WriteLine($"CosA = {Math.Round(CosA, 3)}");
-        //    Console.WriteLine($"Magnitude: {Math.Round(M, 2)}, Angle: {Math.Round(A, 2)}");
-        //    Console.WriteLine("===");
-        //}
-
-        public string GetInfoString()
-        {
-            string result = $"({X1}; {Y1}) --> ({X2}; {Y2}), Magnitude: {M}; Angle: {A}";
-            return result;
-        }
-
 
     }
 }

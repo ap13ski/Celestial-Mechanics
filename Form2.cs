@@ -7,34 +7,34 @@ namespace Celestial
     public partial class Form2 : Form
     {
         NumberFormatInfo separator = new NumberFormatInfo() { NumberDecimalSeparator = "." };
-        bool isgridauto_output;
-        double gridsize_output;
-        int numberofpoints_output;
-        byte pointsize_output;
+        bool is_grid_auto_output;
+        double grid_size_output;
+        int points_number_output;
+        int points_size_output;
         double dt_output;
-        bool isfinaliteration_output;
-        int finaliteration_output;
+        bool is_final_iteration_output;
+        int final_iteration_output;
 
         public Form2(
-            bool isgridauto,
-            double gridsize,
-            int numberofpoints,
-            byte pointsize,
+            bool is_grid_auto,
+            double grid_size,
+            int points_number,
+            int points_size,
             double dt,
-            bool isfinaliteration,
-            int finaliteration
+            bool is_final_iteration,
+            int final_iteration
             )
         {
             InitializeComponent();
             InitializeElements();
 
-            checkBoxIsGridAuto.Checked = isgridauto;
-            textBoxGridSize.Text = Convert.ToString(gridsize);
-            textBoxNumberOfPoints.Text = Convert.ToString(numberofpoints);
-            trackBarPointSize.Value = Convert.ToInt32(pointsize);
+            checkBoxIsGridAuto.Checked = is_grid_auto;
+            textBoxGridSize.Text = Convert.ToString(grid_size);
+            textBoxNumberOfPoints.Text = Convert.ToString(points_number);
+            trackBarPointSize.Value = Convert.ToInt32(points_size);
             textBoxIntegrationStep.Text = Convert.ToString(dt);
-            checkBoxFinalIteration.Checked = isfinaliteration;
-            textBoxFinalIteration.Text = Convert.ToString(finaliteration);
+            checkBoxFinalIteration.Checked = is_final_iteration;
+            textBoxFinalIteration.Text = Convert.ToString(final_iteration);
         }
 
         private void ApplyChanges()
@@ -42,33 +42,33 @@ namespace Celestial
             Form1 FormMain = this.Owner as Form1;
             FormMain.CheckBoxSettingsUncheck();
 
-            isgridauto_output = checkBoxIsGridAuto.Checked;
-            pointsize_output = Convert.ToByte(trackBarPointSize.Value);
-            isfinaliteration_output = checkBoxFinalIteration.Checked;
+            is_grid_auto_output = checkBoxIsGridAuto.Checked;
+            points_size_output = Convert.ToInt32(trackBarPointSize.Value);
+            is_final_iteration_output = checkBoxFinalIteration.Checked;
 
             try
             {
-                gridsize_output = double.Parse(textBoxGridSize.Text);
-                numberofpoints_output = int.Parse(textBoxNumberOfPoints.Text);
+                grid_size_output = double.Parse(textBoxGridSize.Text);
+                points_number_output = int.Parse(textBoxNumberOfPoints.Text);
                 dt_output = double.Parse(textBoxIntegrationStep.Text);
-                finaliteration_output = int.Parse(textBoxFinalIteration.Text);
+                final_iteration_output = int.Parse(textBoxFinalIteration.Text);
             }
             catch (Exception) {}
 
-            if (isgridauto_output == false)
+            if (is_grid_auto_output == false)
             {
-                FormMain.SetGridSize(gridsize_output);
+                FormMain.SetGridSize(grid_size_output);
             }
             else
             {
                 FormMain.SetGridAuto();
             }
 
-            FormMain.SetNumberOfPoints(numberofpoints_output);
-            FormMain.SetPointSize(pointsize_output);
+            FormMain.SetNumberOfPoints(points_number_output);
+            FormMain.SetPointSize(points_size_output);
             FormMain.SetDt(dt_output);
-            FormMain.SetIsFinalIteration(isfinaliteration_output);
-            FormMain.SetFinalIteration(finaliteration_output);
+            FormMain.SetIsFinalIteration(is_final_iteration_output);
+            FormMain.SetFinalIteration(final_iteration_output);
         }
 
         private void checkBoxFinalIteration_CheckedChanged(object sender, EventArgs e)

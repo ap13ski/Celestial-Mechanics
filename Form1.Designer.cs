@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxMain = new System.Windows.Forms.PictureBox();
             this.imageListIcons = new System.Windows.Forms.ImageList(this.components);
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.listBoxMain = new System.Windows.Forms.ListBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.buttonSave = new System.Windows.Forms.Button();
             this.checkBoxIsLabeled = new System.Windows.Forms.CheckBox();
@@ -43,24 +43,24 @@
             this.checkBoxLog = new System.Windows.Forms.CheckBox();
             this.checkBoxGridAuto = new System.Windows.Forms.CheckBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pictureBoxMain)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
-            this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(47, 1);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(299, 258);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
-            this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
-            this.pictureBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseUp);
+            this.pictureBoxMain.InitialImage = null;
+            this.pictureBoxMain.Location = new System.Drawing.Point(47, 1);
+            this.pictureBoxMain.Name = "pictureBoxMain";
+            this.pictureBoxMain.Size = new System.Drawing.Size(299, 258);
+            this.pictureBoxMain.TabIndex = 0;
+            this.pictureBoxMain.TabStop = false;
+            this.pictureBoxMain.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
+            this.pictureBoxMain.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
+            this.pictureBoxMain.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseUp);
             // 
             // imageListIcons
             // 
-            this.imageListIcons.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageListIcons.ImageStream")));
+            this.imageListIcons.ImageStream = ((System.Windows.Forms.ImageListStreamer) (resources.GetObject("imageListIcons.ImageStream")));
             this.imageListIcons.TransparentColor = System.Drawing.Color.Transparent;
             this.imageListIcons.Images.SetKeyName(0, "start.png");
             this.imageListIcons.Images.SetKeyName(1, "stop.png");
@@ -76,14 +76,14 @@
             // 
             // listBox1
             // 
-            this.listBox1.Enabled = false;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(10, 366);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(31, 20);
-            this.listBox1.TabIndex = 5;
-            this.listBox1.TabStop = false;
-            this.listBox1.Visible = false;
+            this.listBoxMain.Enabled = false;
+            this.listBoxMain.ItemHeight = 16;
+            this.listBoxMain.Location = new System.Drawing.Point(10, 366);
+            this.listBoxMain.Name = "listBoxMain";
+            this.listBoxMain.Size = new System.Drawing.Size(31, 20);
+            this.listBoxMain.TabIndex = 5;
+            this.listBoxMain.TabStop = false;
+            this.listBoxMain.Visible = false;
             // 
             // timer1
             // 
@@ -238,34 +238,34 @@
             this.Controls.Add(this.checkBoxSettings);
             this.Controls.Add(this.checkBoxIsLabeled);
             this.Controls.Add(this.buttonSave);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.listBoxMain);
+            this.Controls.Add(this.pictureBoxMain);
             this.DoubleBuffered = true;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Celestial Mechanics";
             this.Resize += new System.EventHandler(this.Form1_Resize);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.pictureBoxMain)).EndInit();
             this.ResumeLayout(false);
-
         }
+
+        private System.Windows.Forms.Button buttonSave;
+        private System.Windows.Forms.CheckBox checkBoxGridAuto;
+        private System.Windows.Forms.CheckBox checkBoxIsLabeled;
+        private System.Windows.Forms.CheckBox checkBoxLog;
+        private System.Windows.Forms.CheckBox checkBoxSettings;
+        private System.Windows.Forms.CheckBox checkBoxStartPause;
+        private System.Windows.Forms.CheckBox checkBoxTraces;
+        private System.Windows.Forms.ImageList imageListIcons;
+        private System.Windows.Forms.ListBox listBoxMain;
+        private System.Windows.Forms.PictureBox pictureBoxMain;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.ToolTip toolTip1;
+
         //Size = new System.Drawing.Size(pictureBox1.Size.Width + 40 + 16, pictureBox1.Size.Height + 33);
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Button buttonSave;
-        private System.Windows.Forms.CheckBox checkBoxIsLabeled;
-        private System.Windows.Forms.ImageList imageListIcons;
-        private System.Windows.Forms.CheckBox checkBoxStartPause;
-        private System.Windows.Forms.CheckBox checkBoxSettings;
-        private System.Windows.Forms.Timer timer2;
-        private System.Windows.Forms.CheckBox checkBoxTraces;
-        private System.Windows.Forms.CheckBox checkBoxLog;
-        private System.Windows.Forms.CheckBox checkBoxGridAuto;
-        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 
