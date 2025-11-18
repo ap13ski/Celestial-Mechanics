@@ -56,13 +56,9 @@ namespace Celestial
             catch (Exception) {}
 
             if (is_grid_auto_output == false)
-            {
-                FormMain.SetGridSize(grid_size_output);
-            }
+                { FormMain.SetGridSize(grid_size_output); }
             else
-            {
-                FormMain.SetGridAuto();
-            }
+                { FormMain.SetGridAuto(); }
 
             FormMain.SetNumberOfPoints(points_number_output);
             FormMain.SetPointSize(points_size_output);
@@ -74,13 +70,9 @@ namespace Celestial
         private void checkBoxFinalIteration_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBoxFinalIteration.Checked == true)
-            {
-                textBoxFinalIteration.Enabled = true;
-            }
+                { textBoxFinalIteration.Enabled = true; }
             else
-            {
-                textBoxFinalIteration.Enabled = false;
-            }
+                { textBoxFinalIteration.Enabled = false; }
         }
 
         private void buttonOk_Click(object sender, EventArgs e)
@@ -102,8 +94,10 @@ namespace Celestial
 
         private void checkBoxIsGridAuto_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBoxIsGridAuto.Checked == true) { textBoxGridSize.Enabled = false; }
-            else { textBoxGridSize.Enabled = true; }
+            if (checkBoxIsGridAuto.Checked == true)
+                { textBoxGridSize.Enabled = false; }
+            else
+                { textBoxGridSize.Enabled = true; }
         }
 
         /*
